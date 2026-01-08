@@ -26,6 +26,7 @@ I am focusing on building strong fundamentals step by step.
 |----|------|
 | Day 01 | Python basics, print statements, variables and datatypes, Input / Output |
 | Day 02 | Python Conditional Statements , if-statement, if-else statement, if-elif-else statement |
+| Day 03 | Python Loops and control statements, while loop, for loop, break statement, continue statement, range, pass statement |
 
 ---
 
