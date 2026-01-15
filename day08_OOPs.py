@@ -1,7 +1,7 @@
 # Python:
 
 # Day 08:
-# Topic covered: Python OOPs, class and object, init function, Class and instance attributes, methods, Abstraction, Encapsulation, Inheritance, Polymorphism, Questions
+# Topic covered: Python OOPs, class and object, init function, Class and instance attributes, methods, Abstraction, Encapsulation, Inheritance, Polymorphism, Dunder Functions
 
 # 1. Class and Object:
 
@@ -81,7 +81,7 @@ class student:
 s1 = student("jivika kaushik",[34,56,78])
 s1.average()     
 
-# # Static method:
+# Static method:
 
 # methods that dont use the self parameter(work at class level)
 # syntax :
@@ -98,5 +98,225 @@ class student:
         print("hello world,i am jivika")
 s1 = student()
 s1.hello_world()        
+
+# property method:
+# we use property decorator on any method in the class to use the method as a property.
+
+# example:
+
+class subjects:
+    def __init__(self,maths,physics,chemistry):
+        self.maths = maths
+        self.physics = physics
+        self.chemistry = chemistry
+        # self.percentage = str((self.maths + self.physics + self.chemistry)/3) +"%"
+
+    @property
+    def percentage(self):
+        return str((self.maths + self.physics + self.chemistry)/3) + "%"
+
+# Super method:
+# it is used to access the methods of parent class.
+
+# example:
+
+class Car:
+
+    def __init__(self,type):
+        self.type = type
+
+    @staticmethod
+    def start():
+        print("car started...")
+
+    @staticmethod
+    def stop():
+        print("car stopped...")
+
+class Toyotacar(Car):
+
+    def __init__(self,name,type):
+        super().__init__(type)
+        self.name = name
+
+t1 = Toyotacar("fortuner","diesel")
+t1.start()
+print(t1.name)
+print(t1.type)       
+
+# class methods:
+# class methods is bound to the class and receives the class as an implicit first argument.
+
+# example:
+
+class Person:
+    name = "jivika"
+
+    @classmethod
+    def changeName(cls,name):
+     cls.name = name
+
+p1 = Person()
+p1.changeName("pratham")
+print(p1.name)
+print(Person.name)        
+
+# 5. Abstraction:
+# hiding the unnecessary details of a class and only showing the essential features to the user.
+
+# 6. Encapsulation:
+# Wrapping data and functions into a single unit(object).
+
+# 7. inheritance:
+# when one class(child) derived the properties of another class(parent).
+
+# There are three types of inheritance:
+
+# 1--single inheritance:
+# it has one base case and one derived case.
+
+class Car:
+    
+    @staticmethod
+    def start():
+        print("car started..")
+        
+    @staticmethod    
+    def stop():
+        print("car stopped..")
+
+class Toyotacar(Car):
+
+    def __init__(self,name):
+        self.name = name
+
+t1 = Toyotacar("fortuner")
+t2 = Toyotacar("prisus")
+
+t1.start()
+
+# 2--multi-level inheritance:
+# it has one base one derived case and one sub derived case.
+
+class Car:
+
+    @staticmethod
+    def start():
+        print("car started")\
+        
+    @staticmethod
+    def stop():
+        print("car stopped")
+
+class Toyotacar(Car):
+
+    def __init__(self,brand):
+        self.brand = brand
+
+class Fortuner(Toyotacar):
+
+    def __init__(self, type):
+        self.type = type
+
+c1 = Fortuner("electric")
+c1.start()      
+
+# 3--multiple inheritance:
+# it can inherit from many parent classes.
+
+class A:
+    vara = "welcome to class A"
+
+class B:
+    varb = "welcome to class B"
+
+class C(A,B):
+    varc = "welcome to class C"
+
+c = C()
+print(c.vara)
+print(c.varb)
+print(c.varc) 
+
+# 8. Polimorphism :
+# when the same operators is allowed to having different meanings according to the context.
+
+class Complex:
+    def __init__(self,real,imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def shownumber(self):
+        print(self.real,"i +",self.imaginary,"j")
+
+num1 = Complex(1,3)
+num1.shownumber()            
+
+num2 = Complex(4,6)
+num2.shownumber()
+
+# 9. operators and dunder functions:
+
+# 1-add == __add__
+# 2-sub == __sub__
+# 3-multiply == __mul___
+# 4-division == __truediv___
+
+# example 1:
+
+class Complex:                                         #for addition dunder.
+    def __init__(self,real,imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def shownumber(self):
+        print(self.real,"i +",self.imaginary,"j")
+
+    def __add__(self,num2):
+        newReal = self.real + num2.real    
+        newImg = self.imaginary + num2.imaginary
+        return Complex(newReal , newImg)
+    
+num1 = Complex(1,3)
+num1.shownumber()            
+
+num2 = Complex(4,6)
+num2.shownumber()
+
+num3 = num1 + num2
+num3.shownumber
+
+# example 2:
+
+class Complex:                                         #for subtraction dunder.
+    def __init__(self,real,imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def shownumber(self):
+        print(self.real,"i +",self.imaginary,"j")
+
+    def __sub__(self,num2):
+        newReal = self.real - num2.real    
+        newImg = self.imaginary - num2.imaginary
+        return Complex(newReal , newImg)
+    
+num1 = Complex(1,3)
+num1.shownumber()            
+
+num2 = Complex(4,6)
+num2.shownumber()
+
+num3 = num1 - num2
+num3.shownumber()
+
+
+
+
+
+
+
+ 
   
   
+
