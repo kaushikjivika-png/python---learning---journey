@@ -32,6 +32,7 @@ I am focusing on building strong fundamentals step by step.
 | Day 06 | Python Function definition, Types of Function, Function calling, Parameters and Arguments, Default arguments, Recursion, Practice problems |
 | Day 07 | Python File handling, reading from files, writing to files, file modes, Deleting files |
 | Day 08 | Python OOPs,  class and object, init function, Class and instance attributes, methods, Abstraction, Encapsulation, Inheritance, Polymorphism, Dunder Functions |
+| Day 09 | Python Basic questions |
 ---
 
 ## 🎯 Goal
