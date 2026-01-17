@@ -49,4 +49,26 @@ elif(year % 400 == 0 and year % 100 == 0):
 else:
     print(year,"is not leap year")
 
+# question 5: Program to check vowel or consonant.
+
+ch = input("Enter a character: ")
+
+if ch.lower() in "aeiou":
+    print("Vowel")
+else:
+    print("Consonant")
+
+# question 6: Program to reverse a number.
+
+num = int(input("Enter a number: "))
+rev = 0
+
+while num > 0:
+    digit = num % 10
+    rev = rev * 10 + digit
+    num = num // 10
+
+print("Reversed number =", rev)
+
+
 
