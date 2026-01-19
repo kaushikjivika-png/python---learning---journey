@@ -70,5 +70,34 @@ while num > 0:
 
 print("Reversed number =", rev)
 
+# question 7: Program to check the number is palindrome or not.
+
+num = int(input("Enter a number: "))
+
+original = num
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+if original == reverse:
+    print("Palindrome number")
+else:
+    print("Not a palindrome number")
+
+# question 8: Program to print the sum of first n natural numbers.
+
+num = int(input("enter number : "))
+sum = 0
+i = 1
+while i<=num:
+    sum += i
+    i += 1
+print("sum = ",sum)
+
+    
+
 
 
