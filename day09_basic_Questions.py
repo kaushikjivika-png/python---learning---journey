@@ -214,3 +214,41 @@ elif(a % 2 != 0 and b % 2 != 0):
     print("MULTIPLICATION :",a * b)
 else:
     print("DIFFERENCE :", a - b)
+
+# question 17: Division with Swap
+
+# You are given two integers a and b.
+
+# First, print integer division of a // b
+
+# Then swap a and b
+
+# Print float division of the swapped values
+
+a = int(input())
+b = int(input())
+if(b != 0):
+    print(a // b)
+else:
+    print("cannot divide by zero")
+a,b = b,a                            # swap values
+if(b != 0):
+    print(a / b)
+else:
+    print("cannot divide by zero")
+
+# question 18: Average Calculator
+
+# You are given two integers a and b.
+
+# Print:
+
+# Integer average of a and b
+
+# Float average of a and b
+
+a = int(input())
+b = int(input())
+
+print((a + b) // 2)   # integer average
+print((a + b) / 2)    # float average
