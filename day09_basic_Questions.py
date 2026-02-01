@@ -280,3 +280,62 @@ n = int(input())
 for i in range(n-1,-1,-1):
     print(i**2)
 
+# question 22: Century Check
+
+# Given an integer year, return True if:
+
+# the year is divisible by 100
+
+# but not divisible by 400
+
+def is_century_year(year):
+    return year % 100 == 0 and year % 400 != 0
+print(is_century_yearr(1900))
+print(is_century_year(2000))
+
+# question 23: Special year
+
+# Given a year:
+
+# Return True if the year is divisible by 4
+
+# But return False if it is divisible by 8
+
+# Except when it is divisible by 16 (then return True)
+
+def is_special_year(year):
+    return year % 16 == 0 or (year % 4 == 0 and year % 8 != 0)
+print(is_special_year(12))
+
+# question 24: Fiscal Year Validity
+
+# A year is considered valid if:
+
+# divisible by 5
+
+# not divisible by 25
+
+# unless divisible by 125
+
+def is_valid_fiscal_year(year):
+    return year % 125 == 0 or (year % 5 ==0 and year % 25 != 0)
+print(is_valid_fiscal_year(2025))
+
+# question 25: Scholarship Eligibility
+
+# Given a student’s marks:
+
+# Eligible if marks ≥ 60
+
+# Not eligible if marks ≥ 90
+
+# Eligible again if marks = 100
+
+def is_scholarship_eligible(marks):
+    return marks == 100 or (marks >= 60  and marks < 90)
+print(is_scholarship_eligible(75))
+
+
+
+
+
