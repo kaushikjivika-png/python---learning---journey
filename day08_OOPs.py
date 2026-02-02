@@ -164,8 +164,40 @@ print(Person.name)
 # 5. Abstraction:
 # hiding the unnecessary details of a class and only showing the essential features to the user.
 
+class Car:
+
+    def start(self):
+        print("Car is starting")
+
+
+# User does not know how the engine works
+# They only use the start() function
+
+my_car = Car()
+my_car.start()
+
 # 6. Encapsulation:
 # Wrapping data and functions into a single unit(object).
+
+class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.__marks = marks   # private variable
+
+    def show_marks(self):
+        print("Marks:", self.__marks)
+
+    def update_marks(self, new_marks):
+        self.__marks = new_marks
+        print("Marks updated")
+
+
+student = Student("Jivika", 85)
+
+student.show_marks()
+student.update_marks(90)
+student.show_marks()
 
 # 7. inheritance:
 # when one class(child) derived the properties of another class(parent).
@@ -319,4 +351,5 @@ num3.shownumber()
  
   
   
+
 
