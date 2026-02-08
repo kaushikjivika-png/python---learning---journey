@@ -407,8 +407,45 @@ else:
     orig_val.remove(max_val)
     print(max(orig_val))
 
+# question 31: You are given n students.
+# Each student has a name and 3 subject marks.
 
+# Store the data in a dictionary and print the average marks of the student whose name is given.
 
+n = int(input())
+student_marks = {}
+for _ in range(n):
+    data = input().split()
+    name = data[0]
+    marks = list(map(float , data[1:]))
+    student_marks[name] = marks
+
+query_name = input()
+
+avg = sum(student_marks[query_name]) / (len(student_marks[query_name]))
+print(f"{avg:.2f}")
+
+# question 32: Given student records with names and 3 marks each,
+# print the name of the student with the highest average.
+
+n = int(input())
+student_marks = {}
+for _ in range(n):
+    data = input().split()
+    name = data[0]
+    marks = list(map(float,data[1:]))
+    student_marks[name] = marks
+
+highest_val = -1
+top_student = ""
+
+for name,marks in student_marks.items():
+    avg = sum(marks) / len(marks)
+    if(avg > highest_val):
+        highest_val = avg
+        top_student = name
+        
+print(top_student)
 
 
 
