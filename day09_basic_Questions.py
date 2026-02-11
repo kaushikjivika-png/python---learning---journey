@@ -447,5 +447,28 @@ for name,marks in student_marks.items():
         
 print(top_student)
 
+# question 33: Check if a number is automorphic or not.
 
+num = int(input("Enter number: "))
 
+square = num ** 2
+
+if str(square).endswith(str(num)):
+    print("Automorphic Number")
+else:
+    print("Not Automorphic")
+
+# question 34: Find Second Largest Element (Without Sorting).
+
+nums = [10, 20, 4, 45, 99]
+
+largest = second = float('-inf')
+
+for n in nums:
+    if n > largest:
+        second = largest
+        largest = n
+    elif n > second and n != largest:
+        second = n
+
+print("Second largest:", second)
