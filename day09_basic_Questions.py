@@ -472,3 +472,23 @@ for n in nums:
         second = n
 
 print("Second largest:", second)
+
+# question 35: Student Grade Calculator
+
+def calculate_grade(marks):
+    if marks >= 85:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 50:
+        return "C"
+    else:
+        return "Fail"
+
+name = input("Enter student name: ")
+marks = float(input("Enter marks: "))
+
+grade = calculate_grade(marks)
+
+print("Name:", name)
+print("Grade:", grade)
