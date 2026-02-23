@@ -492,3 +492,21 @@ grade = calculate_grade(marks)
 
 print("Name:", name)
 print("Grade:", grade)
+
+# question 36: Find the highest score from the dictonary.
+
+students {"Aman " : 78,
+          "Riya" : 92,
+          "Kunal" : 67,
+          "Simran" : 88
+         }
+
+top_student = None
+highest_marks = 0
+
+for name,marks in students.items():
+    if(marks > highest_marks):
+        highest_marks = marks
+        top_student = name
+
+print("Name = ",top_name , ", Marks = ",marks)
