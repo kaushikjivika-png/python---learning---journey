@@ -38,3 +38,25 @@ print("division:",a/b)               # 3.3333
 print("remainder:",a%b)                # 1
 
 print("exponentiation:",a**b)       # 1000
+
+
+# String concept :
+
+# A string is a built-in immutable data type in Python that represents an ordered sequence of characters enclosed within quotation marks.
+
+# # Basic operations in string:
+# 1-concatination- It means adding the two strings.(str1 + str2).
+# 2-length of str- It shows the length of the string.(len(str)).
+
+# Functions of string:
+
+isalnum() - #used to check if str is (a-z),(A-Z),(0-9).
+isalpha() - #used to check if str is (a-z),(A-Z).
+isdigit() - #used to check if str is (0-9).
+islower() - #used to check if str is lowercase(a-z).
+isupper() - #used to check if str is uppercase(A-Z).
+
+
+
+
+
