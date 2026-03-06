@@ -510,3 +510,31 @@ for name,marks in students.items():
         top_student = name
 
 print("Name = ",top_name , ", Marks = ",marks)
+
+# question 37: Given a list of integers, find the second largest element without using the sort() function
+
+numbers = [10, 45, 23, 67, 12]
+
+largest = second_largest = float('-inf')
+
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+
+print("Second largest:", second_largest)
+
+# question 38: Write a program that prints all prime numbers between two given numbers.
+
+start = int(input("Enter start number: "))
+end = int(input("Enter end number: "))
+
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            print(num, end=" ")
