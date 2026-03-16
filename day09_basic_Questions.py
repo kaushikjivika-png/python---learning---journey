@@ -538,3 +538,30 @@ for num in range(start, end + 1):
                 break
         else:
             print(num, end=" ")
+
+# question 39: Given two integers a and b, generate all pairs (i, j) such that:
+
+# 0 ≤ i ≤ a
+# 0 ≤ j ≤ b
+
+# But only include pairs where:
+# i+j<5
+
+a = int(input())
+b = int(input())
+
+result = [[i,j]
+          for i in range(a+1)
+          for j in range(b+1)
+          if(i+j)<5]
+print(result)
+
+# question 40: Given two lists A and B, generate their Cartesian product (a, b) but include only pairs where:
+# a × b < 10
+
+A = [1,2,3,4]
+B = [2,3,5]
+
+result = [(a, b) for a in A for b in B if a*b < 10]
+
+print(result)
