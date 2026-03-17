@@ -565,3 +565,39 @@ B = [2,3,5]
 result = [(a, b) for a in A for b in B if a*b < 10]
 
 print(result)
+
+# question 41: Given n integers, find the number that appears most frequently.
+            # If multiple numbers have the same frequency, print the smallest number among them.
+
+# Input Format
+# 6
+# 1 3 2 3 4 1
+
+n = int(input())
+nums = list(map(int,input().split()))
+
+max_freq = 0
+result = None
+
+for num in nums:
+    freq = nums.count(num)
+    if freq > max_freq:
+        max_freq = freq
+        result = num
+    elif(freq == max_freq):
+        result = min(result,num)
+print(result)
+
+# question 42: Given n integers, calculate the sum of all even numbers in the list.
+# Sample Input
+# 6
+# 1 2 3 4 5 6
+
+n = int(input())
+nums = list(map(int,input().split()))
+
+sum = 0
+for num in nums:
+    if(num % 2 == 0):
+        sum += num
+print(sum)
