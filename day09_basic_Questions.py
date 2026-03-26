@@ -662,3 +662,23 @@ n = int(input())
 t = tuple(map(int,input().split()))
 unique_count = len(set(t))
 print(unique_count)
+
+# question 47: Create a tuple t from input.
+               # Print how many times a given number x appears in the tuple.
+
+n = int(input())
+t = tuple(map(int,input().split()))
+x = int(input())
+count = 0
+for i in t:
+    if(i == x):
+        count += 1
+print(count)
+
+# question 48: Create a tuple t and print the difference between the maximum and minimum elements.
+
+n = int(input())
+t = tuple(map(int,input().split()))
+max_num = max(t)
+min_num = min(t)
+print(max_num - min_num)
