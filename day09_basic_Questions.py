@@ -682,3 +682,30 @@ t = tuple(map(int,input().split()))
 max_num = max(t)
 min_num = min(t)
 print(max_num - min_num)
+
+# question 49: write a function: 
+            # Given a string, reverse each word individually while maintaining the original word order.
+
+def reverse_words(s):
+    words = s.split()
+    reversed_words = []
+    for word in words:
+        reversed_words.append(word[::-1])
+        
+    return " ".join(reversed_words)
+
+s = input()
+print(reverse_words(s))
+
+# question 50: Given a string, count how many uppercase and lowercase letters are present.
+
+str = input()
+uppercase_count = 0
+lowercase_count = 0
+for ch in str:
+    if ch.isupper():
+        uppercase_count += 1
+    else:
+        lowercase_count += 1
+print(uppercase_count)
+print(lowercase_count)
