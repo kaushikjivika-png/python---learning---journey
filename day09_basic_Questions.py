@@ -740,3 +740,28 @@ for word in str:
     if word not in result:
         result.append(word)
 print(" ".join(result))
+
+# question 54: Given a string, count how many substrings consist only of vowels (a, e, i, o, u).
+
+s = input()
+vowles = "aeiouAEIOU"
+count = 0
+current = 0
+
+for ch in s:
+    if ch in vowles:
+        current += 1
+        count += current
+    else:
+        current = 0
+print(count)
+
+# question 55: Given a string and a character, count how many times the character appears in the string.
+
+s = input()
+c = input()
+count = 0
+for ch in s:
+    if ch in c:
+        count += 1
+print(count)
