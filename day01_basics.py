@@ -50,13 +50,13 @@ print("exponentiation:",a**b)       # 1000
 
 # Functions of string:
 
-isalnum() - #used to check if str is (a-z),(A-Z),(0-9).
-isalpha() - #used to check if str is (a-z),(A-Z).
-isdigit() - #used to check if str is (0-9).
-islower() - #used to check if str is lowercase(a-z).
-isupper() - #used to check if str is uppercase(A-Z).
+# isalnum() - #used to check if str is (a-z),(A-Z),(0-9)
+# isalpha() - #used to check if str is (a-z),(A-Z)
+# isdigit() - #used to check if str is (0-9)
+# islower() - #used to check if str is lowercase(a-z)
+# isupper() - #used to check if str is uppercase(A-Z)
 
 
 
-
+ 
 
